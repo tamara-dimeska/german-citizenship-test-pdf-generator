@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
 import PDFMerger from 'pdf-merger-js';
 
@@ -28,6 +28,7 @@ fs.readdir(directory, (err, files) => {
 
 (async () => {
   const browser = await puppeteer.launch({
+    executablePath: '/Applications/Chromium.app/Contents/MacOS/Chromium', // I had some problems with chromium, so I had to add this path here. Before running make sure that you also need this line, and if so, add the correct path
     headless: false,
     args: ['--lang=en-EN'],
   });

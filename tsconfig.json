@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es5", "dom", "ES2016"],
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
     "types": ["node"],
     "esModuleInterop": true,
-    "module": "CommonJS"
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
   },
   "ts-node": {
     "esm": true
